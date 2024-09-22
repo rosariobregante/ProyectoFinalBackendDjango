@@ -1,0 +1,20 @@
+<!-- templates/myapp/base.html -->
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{% block header %}Título Principal{% endblock %}</h1>
+    </header>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
+
+<!-- templates/myapp/home.html -->
+{% extends "myapp/base.html" %}
+{% block content %}
+    <p>Contenido de la página principal.</p>
+{% endblock %}
